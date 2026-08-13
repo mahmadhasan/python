@@ -51,3 +51,23 @@ if balance>0:
         print("Insufficient balance")
 else :
         print("Funds not available")
+
+#Match case /Switch case
+print("1. Add Student")
+print("2. view Student")
+print("3. update Student")
+print("4. delete Student")
+
+choice = int(input("Enter your choice:"))
+match choice:
+    case 1:
+        print("add the student...")
+    case 2:
+        print("view the student details...")
+    case 3:
+        print("update the student...")
+    case 4:
+        print("delete the student...")
+    case _:
+        print("Invalid choice...")
+
