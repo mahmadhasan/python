@@ -5,7 +5,7 @@ for i in range(1,10):
 
 for i in range(1,10):
     if i == 5:
-        break
+        continue
     print(i)
 
 #search name
@@ -16,3 +16,17 @@ for student in students:
     if search_name == student:
         print("student found..",student)
         break
+
+
+
+students = [
+    {"name":"baba","marks":80},
+    {"name":"john","marks":30},
+    {"name":"Hasan","marks":90}
+]
+
+for student in students:
+    if student["marks"] < 35:
+        continue
+    print("certificate sent to ",student["name"])
+
