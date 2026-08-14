@@ -1,4 +1,6 @@
 #list creation
+from tkinter.font import names
+
 courses = ["Java","Python","DevOps","GenAI"]
 
 #access list elements
@@ -51,6 +53,62 @@ print(sorted(numbers)) #ascending order natural sorting
 
 numbers.sort(reverse=True)#descending ordering custom sorting
 print(numbers)
+
+######################################################
+
+#normal way to append the values to empty list
+numbers =[]
+for i in range(0,10):
+    numbers.append(i)
+    print(numbers)
+
+#list comprehension way to append the values to empty list
+numbers = [i for i in range(0,15)]
+print(numbers)
+
+#square of a number in normal way
+squares = []
+for i in range(0,10):
+    squares.append(i*i)
+    print(squares)
+
+#square of a number in using comprehension
+squares = [i*i for i in range(0,10)]
+print(squares)
+
+#even numbers in normal way
+even_numbers = []
+for i in range(0,10):
+    if i% 2 == 0:
+        even_numbers.append(i)
+print(even_numbers)
+
+#even numbers in comprehension way
+even_numbers = [i for i in range(0,10) if i % 2 == 0]
+print(even_numbers)
+
+#name to upper case normal way
+names = ["baba","john","hasan"]
+for name in names:
+    print(name.upper())
+
+#name to upper case comprehension way
+names = ["baba","john","hasan"]
+upper_names = [name.upper() for name  in names ]
+print(upper_names)
+
+#student grades
+marks = [30,60,90,58]
+result = ["Pass" if mark>=35 else "Fail" for mark in marks]
+print(result)
+
+# Calculate GST
+prices = [1000,2000,3000,10000]
+#calculate_gst = [price*1.5 for price in prices]
+calculate_gst = [price + (price*18/100) for price in prices]
+print(calculate_gst)
+
+
 
 
 
