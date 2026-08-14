@@ -27,24 +27,24 @@ while True:
         print("Your balance is:", balance)
 
     elif choice == "2":
-        amount = float(input("Enter deposit amount: "))
+        deposit_amount = float(input("Enter deposit amount: "))
 
-        if amount > 0:
-            balance = balance + amount
+        if deposit_amount > 0:
+            balance = balance + deposit_amount
             print("Deposit successful!")
             print("Your new balance is:", balance)
         else:
             print("Please enter a valid amount.")
 
     elif choice == "3":
-        amount = float(input("Enter withdrawal amount: "))
+        withdraw_amount = float(input("Enter withdrawal amount: "))
 
-        if amount <= 0:
+        if withdraw_amount <= 0:
             print("Please enter a valid amount.")
-        elif amount > balance:
+        elif withdraw_amount > balance:
             print("Insufficient balance!")
         else:
-            balance = balance - amount
+            balance = balance - withdraw_amount
             print("Withdrawal successful!")
             print("Your remaining balance is:", balance)
 
